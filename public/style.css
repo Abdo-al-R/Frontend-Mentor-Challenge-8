@@ -1,0 +1,325 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    -webkit-font-smoothing: antialiased;
+    background-image: url("../images/bg-pattern-top-desktop.svg")
+                    ,url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: white; 
+    font-family: var(--font-family);               
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --font-family: 'League Spartan', sans-serif;
+}
+
+main{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section-1{
+    width: 80%;
+    display: flex;
+}
+
+.title h1{
+    width: 80%;
+    font-size: 3.125rem;
+    color: var(--Very-Dark-Magenta);
+}
+.title p{
+    width: 80%;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-top: 1.563rem;
+    line-height: 20px;
+    color: var(--Dark-Grayish-Magenta);
+}
+.reviews{
+    align-self: center;
+}
+.first-rev , .second-rev , .third-rev{
+    width: 450px;
+    height: 55px;
+    background-color:var(--Light-Grayish-Magenta);
+    color: var(--Very-Dark-Magenta);
+    margin-bottom: 0.938rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.second-rev{
+    margin-left: 3.125rem ;
+}
+.third-rev{
+    margin-left: 6.25rem;
+}
+.reviews span{
+    font-size: 1.063rem;
+    font-weight: 700;
+
+}
+.stars{
+    width: 120px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.comments{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.comments img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: right 1.25rem;;
+
+}
+
+.colton , .Irene , .Anne{
+    width: 350px;
+    height: 235px;
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 8px;
+    padding: 2.5rem 1.875rem 1.875rem 2.813rem;
+}
+.Irene {
+    margin-top: 0.938rem;
+}
+.Anne{
+    margin-top: 1.875rem;
+}
+.personal-info{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+}
+.personal-info p{
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    bottom:20px;
+}
+.personal-info span{
+    color: var(--Soft-Pink);
+    position: absolute;
+    top: -15px;
+}
+.comment{
+    color: white;
+    line-height: 20px;
+    margin-top: 1.875rem;
+}
+
+@media (max-width:375px) and (max-width:480px){
+    main{
+        justify-content: center; 
+        align-items: center;   
+    }
+    .title{
+        margin-top: 3.125rem;
+        margin-bottom: 3.125rem;
+    }
+    .title h1{
+        width: 100%;
+        font-size: 2.5rem !important;
+        text-align: center;
+    }
+    .title p{
+        width: 100%;
+        text-align: center;
+        font-size: 1rem !important;
+    }
+    .section-1{
+        flex-direction: column;
+        margin-bottom: 3.125rem;
+    }
+
+    .first-rev , .second-rev , .third-rev{
+        width: 300px !important;
+        height: 80px;
+        margin-left: initial;
+
+    }
+
+
+    .comments{
+        width: 100%;
+        height: 850px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3.125rem;
+    }
+    .colton , .Irene , .Anne{
+        width: 300px !important;
+        height: 250px;
+
+    }
+    .Irene{
+        margin-top: unset;
+    }
+    .Anne{
+        margin-top: unset;
+    }
+}
+@media (max-width:480px){
+    main{
+        justify-content: center; 
+        align-items: center;   
+    }
+    .title{
+        margin-top: 3.125rem;
+        margin-bottom: 3.125rem;
+    }
+    .title h1{
+        width: 100%;
+        font-size: 2.813rem;
+        text-align: center;
+    }
+    .title p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.125rem;
+    }
+    .section-1{
+        flex-direction: column;
+        margin-bottom: 3.125rem;
+    }
+
+    .first-rev , .second-rev , .third-rev{
+        width: 350px ;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .comments{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3.125rem;
+    }
+
+}
+@media (max-width:768px){
+    main{
+        justify-content: center; 
+        align-items: center;   
+    }
+    .section-1{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3.125rem;
+    }
+    
+    .title{
+        margin-top: 3.125rem;
+        margin-bottom: 3.125rem;
+    }
+    .title h1{
+        width: 100%;
+        font-size: 2.813rem;
+        text-align: center;
+    }
+    .title p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.125rem;
+    }
+    .reviews{
+        align-self: center;
+    }
+
+    .first-rev , .second-rev , .third-rev{
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        margin-left: initial;
+    }
+
+
+    .comments{
+        width: 100%;
+        height: 850px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3.125rem;
+
+    }
+
+    .Irene{
+        margin-top: unset;
+    }
+    .Anne{
+        margin-top: unset;
+    }
+}
+@media (max-width:1200px){
+    main{
+        position: relative;
+    }
+    .section-1{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 3.125rem;
+        padding-top: 3.125rem;
+    }
+
+    .title h1{
+        width: 100%;
+    }
+    .title p{
+        width: 70%;
+    }
+    .Irene{
+        margin-top: unset;
+    }
+    .Anne{
+        margin-top: unset;
+    }
+    .reviews{
+        margin-bottom: 1.25rem;
+
+    }
+    .comments{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+}
